@@ -1,0 +1,11 @@
+sudo: true
+dist: trusty
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - echo $AZURE_CONTAINER_REPOSITORY_PASSWORD | docker login chatng.azurecr.io -u $AZURE_CONTAINER_REPOSITORY_LOGIN --password-stdin
+      - docker build -t chatng-spa .
+      - docker tag chatng-spa chatng.azurecr.io/chatng-spa
+      - docker push chatng.azurecr.io/chatng-spa
