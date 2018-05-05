@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {socketId} from "./websocket";
 
-const connectionUrl = "http://chatng-api.westeurope.azurecontainer.io/";
+const connectionUrl = "http://chatng-api.azurewebsites.net";
 let socket;
 
 const myAxios = axios.create({

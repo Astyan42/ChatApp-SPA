@@ -8,7 +8,7 @@ const messageTypes = {
     MethodReturnValue : 3    
 };
 
-const connectionUrl = "ws://chatng-api.westeurope.azurecontainer.io/notifications/";
+const connectionUrl = "ws://chatng-api.azurewebsites.net/notifications/";
 let socket;
 let id;
 const init = (store) => {
