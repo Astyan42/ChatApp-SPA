@@ -1,6 +1,5 @@
 import React from 'react'
 import dateformat from 'dateformat'
-import Radium from 'radium'
 
 const styles = {
   row: {
@@ -13,12 +12,12 @@ const styles = {
     marginLeft: '5px',
     wordWrap: 'break-word'
   }
-}
+};
 
-export default Radium((props) => {
-  const { name, createdAt, message } = props
+export default (props) => {
+  const { name, createdAt, message } = props;
 
-  let nameUi = null
+  let nameUi = null;
   if (name) {
     nameUi = (
       <span style={styles.name}>{name}</span>
@@ -32,4 +31,4 @@ export default Radium((props) => {
       <span style={styles.text}>{message}</span>
     </div>
   )
-})
+}

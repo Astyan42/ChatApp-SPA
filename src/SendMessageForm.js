@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
 import bind from 'lodash.bind'
 
 const styles = {
@@ -66,4 +65,4 @@ class SendMessageForm extends Component {
   }
 }
 
-export default Radium(SendMessageForm)
+export default SendMessageForm

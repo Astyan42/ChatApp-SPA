@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import Message from './Message'
 
 const styles = {
@@ -17,7 +16,7 @@ const styles = {
   }
 }
 
-export default Radium((props) => {
+export default (props) => {
   const { messages } = props
   let messageUi = null
 
@@ -45,4 +44,4 @@ export default Radium((props) => {
       {messageUi}
     </div>
   )
-})
+}

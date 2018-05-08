@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Radium from 'radium'
 import * as actions from './actions'
 import MessageList from './messages/MessageList'
 import UserList from './users/UserList'
@@ -99,7 +98,7 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default Radium(connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App))
+)(App)

@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import User from './User'
 
 const styles = {
@@ -16,21 +15,20 @@ const styles = {
     minWidth: '210px',
     maxWidth: '20%'
   }
-}
+};
 
-export default Radium((props) => {
-  const { users, userIdsTyping } = props
-  let usersUi = null
+export default (props) => {
+  const { users, userIdsTyping } = props;
+  let usersUi = null;
 
   if (users.size > 0) {
     usersUi = users.map(user => {
-      const userId = user.get('id')
+      const userId = user.get('id');
 
       return (
         <User
           key={userId}
           userName={user.get('name')}
-          userIsTyping={userIdsTyping.has(userId)}
         />
       )
     })
@@ -42,4 +40,4 @@ export default Radium((props) => {
       {usersUi}
     </div>
   )
-})
+}
